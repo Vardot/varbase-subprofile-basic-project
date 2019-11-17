@@ -6,13 +6,13 @@
   "authors": [
     {
       "name": "Vardot",
-      "homepage": "https://bitbucket.org/Vardot",
+      "homepage": "https://www.drupal.org/vardot",
       "role": "Maintainer"
     }
   ],
   "support": {
-    "issues": "https://bitbucket.org/Vardot/varbase-subprofile-basic-project/issues",
-    "source": "https://bitbucket.org/Vardot/varbase-subprofile-basic-project"
+    "issues": "https://github.com/Vardot/Vardot/varbase-subprofile-basic-project/issues",
+    "source": "https://github.com/Vardot/Vardot/varbase-subprofile-basic-project"
   },
   "repositories": {
     "drupal": {
@@ -49,7 +49,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Vardoc\\composer\\": "src/composer"
+      "VarbaseSubProfileBasic\\composer\\": "src/composer"
     }
   },
   "scripts": {
@@ -64,7 +64,8 @@
       "Varbase\\composer\\ScriptHandler::removeGitDirectories"
     ],
     "post-drupal-scaffold-cmd": [
-      "Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"
+      "Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure",
+      "VarbaseSubProfileBasic\\composer\\ScriptHandler::postDrupalScaffoldSubProfileProcedure"
     ]
   },
   "minimum-stability": "dev",
