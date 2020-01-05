@@ -11,8 +11,8 @@
     }
   ],
   "support": {
-    "issues": "https://github.com/Vardot/Vardot/varbase-subprofile-basic-project/issues",
-    "source": "https://github.com/Vardot/Vardot/varbase-subprofile-basic-project"
+    "issues": "https://github.com/Vardot/varbase-subprofile-basic-project/issues",
+    "source": "https://github.com/Vardot/varbase-subprofile-basic-project"
   },
   "repositories": {
     "drupal": {
@@ -82,10 +82,10 @@
     "drupal-core-project-message": {
         "include-keys": ["homepage", "support"],
         "post-create-project-cmd-message": [
-            "<bg=blue;fg=white>                                                         </>",
+            "<bg=blue;fg=white>                                                                                   </>",
             "<bg=blue;fg=white>  Congratulations, you’ve installed the Varbase Sub Profile Basic Project codebase </>",
-            "<bg=blue;fg=white>  from the vardot/varbase-project template!              </>",
-            "<bg=blue;fg=white>                                                         </>",
+            "<bg=blue;fg=white>  from the Vardot/varbase-subprofile-basic-project template!                       </>",
+            "<bg=blue;fg=white>                                                                                   </>",
             "",
             "<bg=yellow;fg=black>Next steps</>:",
 
