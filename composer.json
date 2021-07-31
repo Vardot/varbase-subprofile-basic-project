@@ -6,7 +6,7 @@
   "authors": [
     {
       "name": "Vardot",
-      "homepage": "https://www.drupal.org/vardot",
+      "homepage": "https://github.com/vardot",
       "role": "Maintainer"
     }
   ],
@@ -18,7 +18,7 @@
     "drupal": {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
-      },
+    },
     "assets": {
       "type": "composer",
       "url": "https://asset-packagist.org"
@@ -29,19 +29,15 @@
     }
   },
   "require": {
-    "composer/installers": "~1.0",
-    "oomphinc/composer-installers-extender": "~1.0",
+    "composer/installers": "~1.0 || ~2.0",
+    "oomphinc/composer-installers-extender": "~1.0 || ~2.0",
     "cweagans/composer-patches": "~1.0",
-    "drupal/core-composer-scaffold": "^8.8.0",
-    "drupal/core-project-message": "^8.8.0",
-    "drupal/drupal-library-installer-plugin": "^0.3",
+    "drupal/core-composer-scaffold": "^9",
+    "drupal/core-project-message": "^9",
     "webflo/drupal-finder": "~1.0",
     "webmozart/path-util": "~2.0",
-    "vardot/varbase_subprofile_basic": "8.8.x-dev",
-    "vardot/varbase-updater": "1.x-dev"
-  },
-  "replace": {
-    "ajaxorg/ace-builds": "*"
+    "vardot/varbase_subprofile_basic": "9.0.x-dev",
+    "vardot/varbase-updater": "2.x-dev"
   },
   "config": {
     "bin-dir": "bin/",
@@ -109,7 +105,8 @@
       "we will revert to using (cweagans/composer-patches) without this override."
     ],
     "branch-alias": {
-      "dev-8.x-8.x": "8.8.x-dev"
+      "dev-9.0.x": "9.0.x-dev",
+      "dev-10.0.x": "10.0.x-dev"
     },
     "installer-types": [
       "bower-asset",
@@ -122,7 +119,8 @@
       "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
       "docroot/libraries/slick": ["npm-asset/slick-carousel"],
       "docroot/libraries/ace": ["npm-asset/ace-builds"],
-      "docroot/libraries/masonry": ["npm-asset/masonry-layout"],
+      "docroot/libraries/jquery-ui-touch-punch": ["bower-asset/jqueryui-touch-punch"],
+      "docroot/libraries/jquery-bar-rating": ["npm-asset/jquery-bar-rating"],
       "docroot/libraries/{$name}": [
         "type:drupal-library",
         "type:bower-asset",
@@ -135,22 +133,25 @@
     "drupal-libraries": {
       "library-directory": "docroot/libraries",
       "libraries": [
+        {"name": "objectfitpolyfill", "package": "bower-asset/objectfitpolyfill"},
+        {"name": "chartjs", "package": "bower-asset/chartjs"},
+        {"name": "c3","package": "bower-asset/c3"},
+        {"name": "d3", "package": "bower-asset/d3"},
         {"name": "dropzone","package": "npm-asset/dropzone"},
         {"name": "blazy", "package": "npm-asset/blazy"},
         {"name": "slick", "package": "npm-asset/slick-carousel"},
         {"name": "ace", "package": "npm-asset/ace-builds"},
-        {"name": "chartjs", "package": "bower-asset/chartjs"},
-        {"name": "c3","package": "bower-asset/c3"},
-        {"name": "d3", "package": "bower-asset/d3"},
-        {"name": "masonry", "package": "npm-asset/masonry-layout"},
+        {"name": "jquery-ui-touch-punch", "package": "bower-asset/jqueryui-touch-punch"},
         {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
-        {"name": "swagger-ui", "package": "swagger-api/swagger-ui"}
+        {"name": "swagger-ui", "package": "swagger-api/swagger-ui"},
+        {"name": "fakeobjects", "package": "drupal-ckeditor-plugin/fakeobjects"},
+        {"name": "jquery-bar-rating", "package": "npm-asset/jquery-bar-rating"}
       ]
     },
     "enable-patching": true,
     "composer-exit-on-patch-failure": true,
     "patchLevel": {
-       "drupal/core": "-p2"
+      "drupal/core": "-p2"
     }
   }
 }
